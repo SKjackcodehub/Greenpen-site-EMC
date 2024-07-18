@@ -13,49 +13,61 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
      <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden ">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden ">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           
             <ul class="flex gap-5 text-gray-600 hidden md:flex">
                 <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
-                <li><a class="hover:underline hover:text-black" href="" >Products</a></li>
-                <li><a class="hover:underline hover:text-black"  href="contact.html" >Contact</a></li>
+                <li><a class="hover:underline hover:text-black" href="product.html" >Products</a></li>
+                <li><a class="hover:underline hover:text-black"  href="contact.html">Contact</a></li>
 
             </ul>
         
     </nav>
+    <!-- Side navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center ext-gray-600">
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="product.html" >Products</a></li>
+            <li><a class="hover:underline hover:text-black"  href="contact.html">Contact</a></li>
+        </ul>
+
+     </section>
 
     <!-- Product Page -->
     <section>
         <h1 class="font-bold text-3xl flex justify-center mt-10">Our Products</h1>
         <p class="flex justify-center">
-            <input type="Search for a product..." class="border border-black p-2 m-3" style="width:60%">
+            <input id="search" type="Search for a product..." class="border border-black p-2 m-3" style="width:60%">
         </p>
         
     </section>
 
     <!-- Product Page -->
-    <section class="p-4 text-center">
+    <section class="p-4 text-center" id="productcontainer">
        
         <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
         <div class="">
-            <img src="pot4.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot4.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Rose Pot</h1>
             <p>$20</p>
         </div>
         <div>
-            <img src="pot5.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot5.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Snake Pot</h1>
             <p>$16</p>
         </div>
         <div>
-            <img src="pot6.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot6.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Money Pot</h1>
             <p>$22</p>
         </div>
         <div>
-            <img src="pot7.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot7.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Art Pot</h1>
             <p>$18</p>
         </div>
@@ -65,22 +77,22 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
        
         <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
         <div class="">
-            <img src="pot11.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot11.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>New Pot</h1>
             <p>$20</p>
         </div>
         <div>
-            <img src="pot8.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot8.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Hibiscus Pot</h1>
             <p>$16</p>
         </div>
         <div>
-            <img src="pot9.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot9.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Role Pot</h1>
             <p>$22</p>
         </div>
         <div>
-            <img src="pot14.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <img src="images/pot14.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
             <h1>Pet Pot</h1>
             <p>$18</p>
         </div>
@@ -95,6 +107,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         <p>The stanard chunk of Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, explicabo?</p>
         <p>@ 2021 Greenday.com</p>
     </section>
-    
+    <script src="product.js"></script>
+
 </body>
 </html>
